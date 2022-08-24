@@ -35,11 +35,14 @@
   display: flex;
   align-items: center;
   position: relative;
+  width: 100%;
+    justify-content: space-around;
 }
 .index-nav {
   display: flex;
   align-items: center;
   padding: 0;
+  margin-left: auto;
 }
 .index-item {
   list-style: none;
@@ -63,6 +66,7 @@
   display: flex;
   align-items: center;
   padding: 0;
+  margin-left: auto;
 }
 .index-login__item {
   list-style: none;
@@ -1186,6 +1190,8 @@ height: 960px;
     top: 0;
     left: 0;
     transition: all 0.5s ease;
+    width: auto;
+    justify-content: flex-start;
 
     transform: translateX(-500px);
   }
