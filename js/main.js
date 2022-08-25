@@ -48,18 +48,18 @@ $('.index-slider__carusel').slick({
 
 
   // validate
-  // $('.index-form__content').validate(
-  //   {
-  //     lang: 'ru'  // or whatever language option you have.
-  //   }
-  // );
+  $('.market__form').validate(
+    {
+      lang: 'ru'  // or whatever language option you have.
+    }
+  );
 
-  // $('.form').validate(
-  //   {
-  //     lang: 'ru'  // or whatever language option you have.
-  //   }
-  // );
-  // $(".form").each(function() {
+  $('#index-form').validate(
+    {
+      lang: 'ru'  // or whatever language option you have.
+    }
+  );
+  // $("form").each(function() {
   //   let $form = $(this);
   //   $form.validate(
   //     {
@@ -76,17 +76,10 @@ const indexMenuClose = document.querySelector('.index-menu__close')
 const indexWrapper = document.querySelector('.index-wrapper')
 const indexHeader = document.querySelector('.index-header')
 
-mobileBtn.addEventListener('click', (e)=> {
-  indexMenu.classList.add('open') 
-})
-// indexMenu.addEventListener('click', (e)=> {
-//   e.stopPropagation()
+// mobileBtn.addEventListener('click', (e)=> {
+//   indexMenu.classList.add('open') 
 // })
 
-
-// indexHeader.addEventListener('click', (e)=> {
-//   e.stopPropagation()
-// })
 indexMenuClose.addEventListener('click', ()=> {
   indexMenu.classList.remove('open') 
 })
@@ -94,3 +87,27 @@ indexMenuClose.addEventListener('click', ()=> {
   
 //   indexMenu.classList.remove('open') 
 // })
+
+
+
+
+const toggleMenu = function () {
+  indexMenu.classList.toggle("open");
+}
+
+mobileBtn.addEventListener("click", function (e) {
+  e.stopPropagation();
+  toggleMenu();
+});
+
+document.addEventListener("click", function (e) {
+  const target = e.target;
+  const its_menu = target == indexMenu || indexMenu.contains(target);
+  const its_btnMenu = target == mobileBtn;
+  const menu_is_active = indexMenu.classList.contains("open");
+
+  if (!its_menu && !its_btnMenu && menu_is_active) {
+      toggleMenu();
+  }
+});
+

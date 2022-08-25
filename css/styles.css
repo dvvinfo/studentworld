@@ -313,6 +313,7 @@ height: 960px;
 .experts__avatar {
   width: 100%;
   height: auto;
+  border-radius: 100%;
 }
 .experts__text {
   display: block;
@@ -725,13 +726,15 @@ height: 960px;
 .maket__input-wrapper {
   position: relative;
 }
-#email-error,
-#text-error {
+ #email-error,
+ #text-error {
+  display: none;
   position: absolute;
   top: -25px;
   left: 0;
   width: 100%;
   color: red;
+  opacity: 0;
 }
 .error {
   border-color: red;
@@ -753,7 +756,7 @@ height: 960px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  /* cursor: pointer; */
   border: none;
   display: none;
   background: var(--white);
@@ -777,6 +780,10 @@ height: 960px;
   position: absolute;
   top: 10px;
   right: 10px;
+}
+.index-menu__close img{
+  width: 20px;
+  height: 20px;
 }
 .job__steps-btn {
   display: none;
@@ -1137,6 +1144,7 @@ height: 960px;
     max-width: 100%;
     order: 2;
     height: 237px;
+    border-radius: 0;
   }
   .index-slide__img-wrapper {
     max-width: 100%;
@@ -1369,10 +1377,10 @@ height: 960px;
   }
   .job__img-wrapper {
     max-width: 425px;
-    height: 259px;
+    height: auto;
   }
   .job__item {
-    margin-top: 250px;
+    margin-top: 50px;
   }
   .job__item-title {
     font-size: 20px;
@@ -1417,7 +1425,7 @@ height: 960px;
     padding-top: 86px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 204px);
+    grid-template-rows: repeat(4, 300px);
     gap: 45px 40px;
   }
   .advantages__block {
@@ -1439,6 +1447,7 @@ height: 960px;
     margin-left: 25px;
     font-size: 22px;
     line-height: 25px;
+    max-width: 325px;
   }
   .index-slider__carusel .slick-dots li button {
     width: 35px;
@@ -1488,14 +1497,11 @@ height: 960px;
     margin-top: 32px;
   }
 
-  element.style {
-    width: 704px;
-  }
   .slick-initialized .slick-slide {
     display: block;
   }
   .reviews__slide {
-    width: 433px;
+    height: auto;
   }
 
   .index-footer__nav {
@@ -1511,6 +1517,8 @@ height: 960px;
   }
   .index-footer__item:last-child {
     padding-bottom: 0;
+  }.error {
+    border-color: red;
   }
 }
 @media (max-width: 580px) {
@@ -1554,15 +1562,50 @@ height: 960px;
     color: var(--white);
   }
 }
+@media (max-width: 460px) {
+  .order-type__img-wrapper {
+    width: 100%;
+    max-width: 259px;
+    height: 197px;
+  }
+  .small {
+    max-width: 139px;
+    width: 100%;
+    height: 63px;
+  }
+  .medium {
+    max-width: 139px;
+    width: 100%;
+    height: 122px;
+  }
+  .index-padding{
+    padding: 0 5px;
+  }
+}
 @media (max-width: 430px) {
   .market__title {
     max-width: 158px;
     font-size: 25px;
   }
   .job__steps-text {
-    font-size: 14px;
+    font-size: 13px;
   }
   .job__steps-block {
     margin-right: 10px;
+  }
+  
+.experts__block-one {
+  margin-left: 19px;
+  margin-right: 25px;
+}
+.index-form__wrapper {
+  padding: 21px 36px 27px 36px;
+}
+
+
+}
+@media (max-width: 380px) {
+  .job__steps-text {
+    font-size: 12px;
   }
 }
