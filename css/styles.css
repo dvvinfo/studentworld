@@ -792,7 +792,7 @@ height: 960px;
   height: 860px;
   position: absolute;
   top: -242px;
-  left: 25px;
+  left: 0;
   background: url(../images/Ellipse-left-3.png) no-repeat;
   background-size: contain;
 }
@@ -1056,12 +1056,16 @@ height: 960px;
     width: 100%;
     height: 263px;
   }
+  .index-container {
+    padding: 0 30px;
+  }
+  .experts__block-one {
+    margin-right: 30px;
+}
 }
 
 @media (max-width: 1500px) {
-  .index-container {
-    padding: 0 10px;
-  }
+  
   .market__wrapper {
     background: url(../images/img-bg.webp) no-repeat right;
     height: 615px;
