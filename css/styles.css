@@ -1445,7 +1445,7 @@ height: 960px;
     margin-left: 25px;
     font-size: 22px;
     line-height: 25px;
-    max-width: 325px;
+    width: 325px;
   }
   .index-slider__carusel .slick-dots li button {
     width: 35px;
@@ -1579,8 +1579,14 @@ height: 960px;
   .index-padding{
     padding: 0 5px;
   }
+  .index-slide__text {
+    width: 280px;
+  }
 }
 @media (max-width: 430px) {
+  .index-slide__text {
+    width: 250px;
+  }
   .market__title {
     max-width: 158px;
     font-size: 25px;
@@ -1603,7 +1609,17 @@ height: 960px;
 
 }
 @media (max-width: 380px) {
+  .index-slide__content {
+    padding-left: 17px;
+}
   .job__steps-text {
     font-size: 12px;
   }
+  .index-slide__text {
+    margin-left: 15px;
+    font-size: 20px;
+}
+.index-slider__carusel .slick-dots{
+  left: 17px;
+}
 }
