@@ -1040,6 +1040,10 @@ height: 960px;
 }
 
 @media (max-width: 1700px) {
+  .market__wrapper {
+    background: url(../images/img.webp) no-repeat 640px;
+    background-size: contain;
+}
   .order-type__img-wrapper {
     max-width: 415px;
   }
