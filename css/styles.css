@@ -6,6 +6,7 @@
 :root {
   --black: #444444;
   --blue: #008cff;
+  --lightblue: #7dc2ff;
   --white: #ffffff;
   --white-f4: #f4f4f4;
   --yellow: #fff069;
@@ -148,15 +149,9 @@
   background: var(--blue);
   border-radius: 10px;
 }
-/* .market__img{
-    width: 1000px;
-position: absolute;
-right: -120px;
-top: 0;
-    height: 713px;
-    background: url(../images/img.webp) no-repeat;
-    background-size: contain;
-} */
+.market__btn:hover{
+background-color: var(--lightblue);
+}
 
 .order-type {
   padding-top: 50px;
@@ -398,6 +393,9 @@ height: 960px;
   font-size: 24px;
   line-height: 28px;
   color: var(--white);
+}
+.index-form__btn:hover{
+  background-color: var(--lightblue);
 }
 
 /* job */
